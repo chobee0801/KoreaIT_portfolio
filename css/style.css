@@ -1,0 +1,300 @@
+@charset "UTF-8";
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p,
+a, address, em, img, q, small, strong,
+b, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, figcaption, footer, header, hgroup,
+menu, nav, section, summary, audio, video { margin:0; padding:0; border:0; font-size:100%;
+                                          font:inherit; }
+
+html, body{ margin: 0; padding: 0;
+          font-family: 'Nanum Gothic', sans-serif;
+          color:black; font-weight:400; height:100%; word-break:keep-all;
+          font-size:15px; line-height: 1;}
+article, aside, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display:block;}
+li { list-style: none;}
+a{ text-decoration:none; outline:none; }
+p{ font-weight:300; letter-spacing:1px;}
+section hr { width: 0;}
+::selection {background: #ada074; color:white;}
+::-moz-selection {background: #ada074; color:white;}
+
+/* scrollUp, 플러그인 */
+#scrollUp {
+bottom: 20px;
+right: 20px;
+padding: 10px 20px;
+border-radius: 20px;
+background: rgba(180, 158, 136, 0.7);
+color: #fff;
+}
+
+/* 스크롤시 컨텐츠 나타내기 위한 초기값 */
+section > div > .textWrap { opacity: 0;}
+section > div > .container { opacity: 0;}
+section > div > .grid { opacity: 0;}
+section > div > .itemWrap { opacity: 0;}
+section > div > .contactWrap { opacity: 0;}
+section > div > .contactWrap > .email { opacity: 0;}
+section > div > .contactWrap > .phone { opacity: 0;}
+section > div > .contactWrap > .address { opacity: 0;}
+
+
+/* Start page */
+.start-page{ position:relative; width:100%; height:100%; z-index:10;
+             background: url('../images/mainpage.jpg') no-repeat center 70% /cover; }
+.start-page hr{ color: white; margin-top: 30px; background-color: white;
+                height: 1px; width: 0px; border:0;}
+.start-page .opacity{ position:absolute; width:100%; height:100%;
+                      background:rgba(0, 0, 0, 0.6); }
+.start-page .content{ position:relative; width:100%; margin: 0 auto; height:100%;}
+.start-page .content .text{ position:absolute; text-align:center; margin:auto;
+                            top: 160px; left:0; bottom:0; right:0; width: 100%; height: 520px;}
+.start-page .content .text h1{ font-size: 70px; color: white; text-transform: uppercase;
+                               letter-spacing: 1px; line-height: 1.2; font-weight: 500;
+                               font-family: 'Anton', sans-serif;}
+.start-page .content .text h1.typing-txt {display: none;}
+.start-page .content .text .typing { display: inline-block; height: 70px; }
+
+.start-page .content .text p { color: #fff; line-height: 30px; margin-top: 40px;
+                               font-size: 16px;}
+.start-page .content .text .read-more { width:100px; height:47px; margin: 70px auto;
+                                        line-height:47px; border:1px solid white;
+                                        text-transform: uppercase; color:white;
+                                        display:block; cursor:pointer;
+                                        font-size:14px; letter-spacing: 1px;
+                                        background:none;
+                                        -webkit-transition: all 0.6s ease-in;
+                                        -moz-transition: all 0.6s ease-in;
+                                        -ms-transition: all 0.6s ease-in;
+                                        -o-transition: all 0.6s ease-in;
+                                        transition: all 0.6s ease-in;}
+.start-page .content .text .read-more:hover{ color:white; background: #ada074; border:1px solid #ada074;}
+.start-page .content .arrow-down{ position: absolute; font-size: 12px; color: #fff;
+                                  bottom: 110px; left: 50%; margin-left: -10px;
+                                  animation: bounce-fade 1.3s infinite; }
+@-webkit-keyframes bounce-fade {
+    0%   { opacity: 0; bottom: 60px; }
+    50%  { opacity: 1; bottom: 40px;}
+    100% { opacity: 0; bottom: 20px; }
+}
+@-moz-keyframes bounce-fade {
+    0%   { opacity: 0; bottom: 60px; }
+    50%  { opacity: 1; bottom: 40px;}
+    100% { opacity: 0; bottom: 20px; }
+}
+@-o-keyframes bounce-fade {
+    0%   { opacity: 0; bottom: 60px; }
+    50%  { opacity: 1; bottom: 40px;}
+    100% { opacity: 0; bottom: 20px; }
+}
+@keyframes bounce-fade {
+    0%   { opacity: 0; bottom: 60px; }
+    50%  { opacity: 1; bottom: 40px;}
+    100% { opacity: 0; bottom: 20px; }
+}
+
+
+/* Mobile Menu */
+#mobile-menu { display:none; }
+#mobile h2 { position: absolute; left: -9999px;}
+#mobile-menu { position:relative; width:100%; height:70px;
+               background:#ada074; z-index:1000; }
+#mobile-menu .mobile-content{ position:relative; width: 90%; margin:0 auto; }
+#mobile-menu .mobile-content .logo > img { position: absolute; top: 20px;
+                                             }
+#mobile-menu .mobile-content .icon > img { position: absolute; top: 10px; right: 10px;
+                                           float:right; width:35px; height:45px; }
+#mobile-menu .mobile-content .icon > img:hover { cursor: pointer;}
+.menu-click{ display:none; }
+.menu-click { position: relative; width: 100%; height: 300px; z-index: 1000; display: block;}
+.menu-click li {position:relative; z-index:1000;
+                color:#333333; font-size:18px;
+                text-align:center; line-height:60px;
+                border-bottom:1px solid #f2f2f2;
+                -webkit-transition: all 0.2s ease-in;
+                -moz-transition: all 0.2s ease-in;
+                -ms-transition: all 0.2s ease-in;
+                -o-transition: all 0.2s ease-in;
+                transition: all 0.2s ease-in;}
+.menu-click li > a { display: block;  width:100%; height:60px; z-index: 1000;
+                     background: #fff;
+                     color: #000; text-transform: uppercase;}
+.menu-click li >a:hover {color:#ada074;}
+
+/* Menu */
+#menu { position: absolute; top:0; left: 0; z-index: 1000;
+        width: 100%; height: 60px; background: #fff;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
+#menu h2 { position: absolute; left: -9999px; }
+#menu .menu { text-transform: uppercase;}
+.menu-content { width: 100%; position: relative; margin: 0 auto; }
+.menu-content .logo { float: left; margin-left: 80px; margin-top: 15px;}
+.menu-content .logo >img { display: block; }
+.menu-content ul { float: right; width: 500px; margin-right: 10px;text-align: right;}
+.menu-content ul li { float: left; padding-left: 20px; }
+.menu-content ul li a { display: block; color: #000; line-height: 60px; }
+.menu-content ul li a:hover { color: #ada074; font-weight: bold; }
+.menu-content ul li a.col { color: #ada074; font-weight: bold; }
+
+/* about me */
+.about-me{position:relative; width:100%; background:#f3f3f3; z-index:10;}
+.about-me .content{position:relative; width:80%; margin: 0 auto;
+                   overflow: hidden; zoom:1; padding-bottom: 30px;}
+.about-me h2{ font-size:34px; color:black; text-align:center;
+              margin-top:100px; padding-top: 30px;
+              letter-spacing:6px; font-weight:bold;
+              text-transform:uppercase; line-height:1.2;}
+.about-me hr{color: black; margin-top:30px; background-color: black;
+              height: 1px; border:0;}
+.about-me .title { text-align: center; padding-top: 20px; font-size: 14px;
+                   text-transform: uppercase;}
+.about-me .textWrap { width: 80%; margin: 0 auto;
+                      display: flex; flex-flow: row wrap;
+                      justify-content: space-around;}
+.about-me .textWrap img { width: 200px; height: 250px; display: block;
+                          margin-top: 30px;
+                          border-radius:200px;}
+.about-me .name p {line-height:30px; font-size:14px; font-weight:300;
+                   text-align:left;
+                   margin-top: 80px;}
+.about-me .name span { font-size: 12px; color: #a4a4a4; line-height: 50px;}
+
+.about-me .skill { margin-top: 30px; }
+.about-me .skill .bar-container { margin: 0 auto; margin-top: 20px; }
+.skill progress { -webkit-appearance: none;
+                  appearance: none;
+                  padding-right: 5px;}
+.skill progress::-webkit-progress-value { border-radius: 10px; }
+.skill progress::-webkit-progress-bar { border-radius: 10px; background-color: #fff;}
+.bar-container:nth-child(1) progress::-webkit-progress-value {background-color: #fea17a;}
+.bar-container:nth-child(2) progress::-webkit-progress-value {background-color: #6484df;}
+.bar-container:nth-child(3) progress::-webkit-progress-value {background-color: #eeeb5e;}
+.bar-container:nth-child(4) progress::-webkit-progress-value {background-color: #8edf8e;}
+
+/* .about-me .skill {  width: 380px; margin-top: 40px;}
+.about-me .skill p { font-size:14px; font-weight:300;
+                     text-align: center; line-height: 40px; }
+.about-me .skill span { color: #ada074; padding-right: 5px;} */
+.container { position: relative; width: 100%; }
+.containerWrap { width: 90%; margin: 20px auto;
+                display: flex; flex-flow: row wrap; justify-content: space-around;}
+.containerWrap .serviceBox { width: 200px; margin-top: 20px; }
+.containerWrap .serviceBox i { color: #ada074; text-align: center;
+                              margin-left: 75px;}
+.containerWrap h3 { font-size: 19px; padding-top: 20px; text-align: center; }
+.containerWrap p { font-size: 14px; line-height: 30px; text-align: center;
+                   padding-top: 10px;  color: #595959; }
+
+/* practice , flexible 사용 */
+.practice { position:relative; width:100%; background:white; z-index:10;
+            display: flex; }
+.practice .practiceWrap { position:relative;
+                          width:90%; margin: 0 auto;
+                          overflow: hidden; zoom:1;}
+.practice h2 { font-size:34px; color:black; text-align:center;
+               margin-top:100px; padding-top: 30px; text-transform: uppercase;
+               letter-spacing:6px; font-weight:bold; line-height:1.2;}
+.practice hr { color: black; margin-top:30px; background-color: black;
+               height: 1px; width:0px; border:0;}
+.practice .title { text-align: center; padding-top: 20px; font-size: 14px;}
+.practice .grid { position: relative;
+                  display: flex;
+                  flex-flow: row wrap;
+                  justify-content: space-around;
+                  width: 100%; margin: 30px auto; overflow: hidden;}
+.practice .grid li { position: relative;
+                     width: 300px; height: 250px;
+                     background: rgba(181, 181, 181, 0.3);
+                     overflow: hidden; margin: 0 20px 40px; }
+.practice .grid li a { display: block; padding: 25px 25px; color: #fff;
+                       font-weight: 500; font-size: 20px;}
+.practice .grid li a > img { width: 250px; height: 200px;}
+.practice .grid li:hover { box-shadow: 0 14px 28px rgba(56, 42, 28, 0.5); transition: 0.5s; }
+.practice .grid .text  { position: absolute; left: 0; top: 0; opacity: 0;
+                        width: 100%; height: 100%;
+                        padding-top: 50px;
+                        text-align: center; line-height: 30px; }
+.practice .grid .text hr { width: 60px; background-color: #fff; margin: 10px auto;}
+.practice .grid .text > .explain { font-style: normal; font-weight: 600; font-size: 24px;}
+.practice .grid .explain { padding-top: 10px; font-size: 22px;}
+.practice .grid .text:hover { background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%;
+                              -webkit-transition: all 0.3s linear;
+                              -moz-transition: all 0.3s linear;
+                              -ms-transition: all 0.3s linear;
+                              -o-transition: all 0.3s linear;
+                              transition: all 0.3s linear;
+                              opacity: 1;}
+
+/* Portfolio */
+.portfolio { position:relative; width:100%;
+             background:#f3f3f3; z-index:10; padding-bottom:60px}
+.portfolio .portfolioWrap { position:relative; width:100%; overflow:hidden; margin:0 auto;}
+.portfolio p.title{ margin: 40px auto; width:auto; line-height:25px;
+                    font-size:14px; font-weight:300; text-align:center;}
+.portfolio .portfolioWrap h2{ font-size:34px; color:black; text-align:center;
+                              margin-top:160px; letter-spacing:6px; font-weight:bold;
+                              text-transform:uppercase; line-height:1.2;}
+.portfolio .portfolioWrap hr{ color: black; margin-top:30px;
+                              background-color: black;
+                              height: 1px; width:0px; border:0;}
+.portfolio .itemWrap { width: 80%; margin: 0 auto; }
+.itemText h3 {position: relative;}
+.portfolio-item { position: relative; width: 100%; float: left; padding-bottom: 100px;}
+.portfolio-item .item { position: relative; width: 100%; }
+.portfolio-item .item > img { width: 65%; height: auto; float: left; }
+.portfolio-item .item .itemText { width: 35%; float: left; padding-top: 10px; text-align: left; }
+.portfolio-item .itemText h3 { font-size: 24px; text-transform: uppercase; line-height: 30px;
+                                padding-bottom: 40px;  padding-left: 50px; }
+.portfolio-item .itemText p { font-size: 14px; line-height: 30px;
+                              text-transform: uppercase; padding-left: 50px;}
+.portfolio-item .itemText a { display: block; border: 1px solid #ada074;
+                              color: #ada074; float:left; margin-top: 30px;
+                              width: 150px; height: 40px;  margin-left: 50px;
+                              line-height: 40px; text-align: center;}
+.portfolio-item .itemText a:hover { background: #ada074; color: #fff; border: 1px solid #ada074;}
+
+
+/* Contact */
+.contact { position:relative; width:100%; height: 700px;
+           z-index:10; margin-bottom: 290px; background: #fff; }
+.contact p.title { margin: 20px auto; width:auto; line-height: 25px;
+                   font-size: 14px; font-weight: 300; text-align: center;}
+.contact h2{ font-size: 34px; color: black; text-align: center;
+             padding-top: 100px; letter-spacing: 6px; font-weight: bold;
+             text-transform: uppercase; line-height: 1.2;}
+.contact hr{ color: black; margin-top:30px; background-color: black;
+             height: 1px; width:0px; border:0; }
+.contactWrap{ position: relative; width: 90%;
+              margin: 0 auto; padding-top: 50px;
+              display: flex; flex-flow: row wrap; justify-content: space-around; }
+.contact_div { width: 20%; text-align: center; margin-top: 10px;}
+.contact_div h3 { font-weight: 400; font-size: 18px; text-transform: uppercase; }
+.contact_div span { position: relative; width: 100px; height: 100px;
+                    background: #fff;
+                    display: block; margin: 0 auto;
+                    border: 2px solid #ada074; border-radius: 3px;
+                    margin: 40px auto;
+                    transform: rotate(-45deg); }
+.contact_div i { color: #ada074; line-height: 100px; display: block; transform: rotate(45deg);}
+.contact_div i:hover { transform: scale(1.5); transition: all 0.5s; }
+
+/* Footer */
+.footer{ position:fixed; bottom:0; width:100%; height: 300px; background:#3c3c3c; }
+.footer .logo >img {position:relative; display: block; width: 100px; height: 35px;
+                    margin: 0 auto; padding-top: 80px; padding-bottom: 20px;}
+.footer .menu-footer{ width:80%; text-align:center; margin:0 auto; padding-top: 10px;
+                      overflow: hidden; position:relative;  }
+.footer .menu-footer a{line-height:46px; padding:10px; color:#a4a4a4;
+                       text-transform: uppercase;
+                       -webkit-transition: all 0.2s ease-in;
+                       -moz-transition: all 0.2s ease-in;
+                       -ms-transition: all 0.2s ease-in;
+                       -o-transition: all 0.2s ease-in;
+                       transition: all 0.2s ease-in;}
+.footer .menu-footer a:hover{color:#ada074;}
+.footer .copyright{ width:80%; position:relative; font-weight:300;
+                    margin:0 auto; padding:30px 0 0;
+                    text-align:center; text-transform: capitalize;
+                    font-size:14px; line-height:36px; color:#a4a4a4; }

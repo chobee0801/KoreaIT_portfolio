@@ -1,0 +1,53 @@
+@media screen and ( max-width: 900px ) {
+  .mobile { display: block;}
+  .topNav_Wrap { display: none;}
+  .mainNav_Wrap { display: none;}
+  .footer_pc { display: none;}
+  .footer_mobile {display: block;}
+
+  section{ padding-top: 60px; }
+  section .content> h2 { font-size: 38px; }
+  section>h2 { font-size: 32px; }
+  section p { font-size: 16px; }
+  section a { font-size: 16px; }
+  .page9 .slides { width: 1600px; }
+  .page9 a { width: 300px; }
+  .page9 dl> dt { font-size: 16px; }
+  .page9 dl> dd { font-size: 14px; }
+  .page10 { margin-bottom: 100px; }
+  .page10 .apparelWrap>a>span {font-size: 20px; }
+  .m_copyleft i { font-size: 20px; }
+  .m_copyleft span { font-size: 14px; }
+  .m_copyleft small { font-size: 12px; }
+  .m_copyright a { font-size: 14px; }
+  .m_addressWrap { font-size: 14px; }
+  .m_address1 span { font-size: 12px;}
+}
+
+
+@media screen and ( max-width:425px ) {
+  .mobile { display: block;}
+  .topNav_Wrap { display: none;}
+  .mainNav_Wrap { display: none;}
+  .footer_pc { display: none;}
+  .footer_mobile {display: block;}
+
+  section{ padding-top: 60px; }
+  section .content> h2 { font-size: 7vw;}
+  section>h2 { font-size: 4.9vw;}
+  section p { font-size:  3.2vw;}
+  section a { font-size: 3.6vw;}
+  .page9 .slides { width: 1600px;}
+  .page9 a { width: 300px;}
+  .page9 dl> dt { font-size: 3.5vw;}
+  .page9 dl> dd { font-size: 3.3vw;}
+  .page10 .apparelContent { width: 100%; padding-bottom: 20px;}
+  .page10 .apparelWrap>a>span {font-size: 5vw;}
+  .footer_mobile { font-size: 3.4vw;}
+  .m_copyleft i { font-size: 2.8vw; }
+  .m_copyleft span { font-size: 2.7vw; }
+  .m_copyleft small { font-size: 2.5vw; }
+  .m_copyright a { font-size: 2.8vw; }
+  .m_addressWrap { font-size: 2.8vw; }
+
+}
